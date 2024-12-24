@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>موقع المقالات</title>
+  <style>
+    body {font-family: Arial; background-color: #f2f2f2;}
+    header {background-color: #333; color: #fff; padding: 20px; text-align: center;}
+    main {display: flex; flex-wrap: wrap; justify-content: center;}
+    article {width: 80%; background-color: #fff; padding: 20px; margin: 20px; border: 1px solid #ddd; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);}
+    footer {background-color: #333; color: #fff; padding: 20px; text-align: center; clear: both;}
+  </style>
+</head>
+<center>
+<body>
+  <header><h1>موقع المقالات</h1></header>
+  <main>
+    <article><h2>عنوان المقالة الأولى</h2><p>نص المقالة الأولى</p></article>
+    <article><h2>عنوان المقالة الثانية</h2><p>نص المقالة الثانية</p></article>
+  </main>
+  <script>
+ let visitorCount = localStorage.getItem('visitorCount') || 0;
+ document.getElementById('visitor-count').innerHTML = visitorCount;
+ function incrementVisitorCount() {
+ visitorCount++;
+ localStorage.setItem('visitorCount', visitorCount);
+ document.getElementById('visitor-count').innerHTML = visitorCount;
+ }
+ incrementVisitorCount();
+ </script>
+ <p>عدد الزوار: <span id="visitor-count"></span></p>
+  <footer>حقوق النشر &copy; 2024</footer>
+</body>
+</center>
+</html>
